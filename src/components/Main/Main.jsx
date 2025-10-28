@@ -1,18 +1,18 @@
-import Jumbotron from "./jumbotron"
-function Main({x1}) {
-    return ( 
-        <>
-            <Jumbotron texto={x1}/>
-            {/* <h3>UTLD</h3>
-            <p>Julio Emilio Silva Licerio</p>
-            <p>Sistemas y Desarrollo de Software</p> */}
-            <h1>Compartiendo: {x1}</h1>
+import "./Main.css"
+import Profile from "./Profile/Profile.jsx"
+import CardContainer from "./CardContainer/CardContainer.jsx"
 
-            {/* <button onClick={()=>{
-                    setx1("nuevo valor")
-                }}>Actualizar</button>*/}
-        </>
-    );
+function Main() {
+    return (
+        <main className="main">
+            <section className="traveler">
+                <Profile />
+            </section>
+            <section className="gallery">
+                <CardContainer />
+            </section>
+        </main>
+    )
 }
 
-export default Main
+export default Main;
