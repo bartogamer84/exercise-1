@@ -1,14 +1,12 @@
-import './Header.css'
-function Header({setx1}) {
-    return ( 
-        <>
-            <header className='header'>
-            <h1>Título Header</h1>
-            <button onClick={()=>{
-                setx1("Otro nuevo valor")
-            }}>Click del header</button>
-            </header>
-        </>
+import logo from '../../../images/logo-mexico.jpeg';
+import './Header.css';
+
+function Header () {
+    return (
+        <header className="header">
+            <img className='header_logo' src={logo} alt='Magical mexico'></img>
+            <h1>México Mágico</h1>
+        </header>
     );
 }
 

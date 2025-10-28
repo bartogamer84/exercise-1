@@ -1,33 +1,19 @@
-import { useState } from "react";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
-import Background from './components/Background/Background';
+import Header from './components/Header/Header.jsx';
 import { AppContext } from './components/Context/AppContext';
+import './App.css';
 
 function App() {
-  const [x1, setx1] = useState("START VALUE");
-
-
-  const [c1, setc1] = useState("ROWAN NETWORKS");
-  return ( 
+  return (
     <>
-      <AppContext.Provider value={{c1, setc1}}>
-        <Header setx1={setx1}/>
-        <Background>
-          <Main x1={x1}/>
-          <Footer setx1={setx1} x1={x1}/>
-        </Background>
-      
-        {/* <h3>Esto está en APP</h3> */}
-      </AppContext.Provider>
-      
+      <AppContext.Provider>
+        <div class="app">
+          <div className='app_content'>
+            <Header />   
+          </div>
+        </div>
+      </AppContext.Provider>    
     </>
-  );
+  )
 }
 
 export default App;
-
